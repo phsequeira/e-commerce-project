@@ -1,0 +1,42 @@
+export const boards = [
+    {
+        id: 1,
+        name: 'Twinzer', 
+        image: 'Twinzer.PNG',
+        description: 'Fast, loose, and lively…. The main feature of this performance surfboard is it’s unique four fin configuration using a small, front canard fin placed just before the larger side fin. This creates a wider effective base on the main fin allowing a higher angle of attack which delivers sharper turns, more bite, and less chance of spinning out. This shape is a full body diamond tip and tail with a single concave throughout finishing with a slight V in the tail. With sharp rails tip to tail, this board will have you gliding across the water and taking your riding to the next level.',
+        category: 'wakesurf',
+        price: 899.99,
+    },
+    {
+        id: 2,
+        name: 'Space Pod',
+        image: 'SpacePod.PNG',
+        description: 'Shaped by the master himself, Jimmy Redmon, the Space Pod is the highest performance surfboard in the Liquid Force line.  The parallel outline allows for a narrower board that is quicker and easier to turn.  The split tail increases drive and hold and the increased nose and tail rocker add maneuverability.  The CNC\'d lightweight EPS stringer core and LF-exclusive carbon innegra deck with the carbon tape reinforced hull makes this board a light and durable wake bashing machine.  Add in the carbon fin quad setup and you have the ultimate board in the Atomic Series.',
+        category: 'wakesurf',
+        price: 839.99,
+    },
+    {
+        id: 3,
+        name: 'Bonzer Bat',
+        image: 'BonzerBat.PNG',
+        description: 'Welcome to your futures past. The all new Bonzer Bat is a new take on a classic surfboard design. The double concave venturi hull exits the tail and corners of the board giving you maximum propulsion and speed. This allows the board to be as narrow as possible and go rail to rail quickly and easily. Keeping a pointed nose tip shape and higher nose rocker line, the Bonzer Bat is catch free for aggressive off the lips and powerful bottom turns. The Angled Stubbie fins accentuate the venturi effect into 3 dimensions giving you great hold into the turn and more speed out of it. Add in the Carbon Wrap to help protect the tail, The Bonzer Bat gives you the best opportunity for your most aggressive surf session yet.',
+        category: 'wakesurf',
+        price: 839.99,
+    },
+    {
+        id: 4,
+        name: 'Scamp',
+        image: 'Scamp.PNG',
+        description: 'The Scamp is known as the board that many have began wakesurfing on. The wide profile makes the board very stable and still fast. The thinner core provides exceptional float yet maintains excellent rail sensitivity for the lighter rider. The tri-fin set up provides drive and locks in the face of the wave, but stays free enough to turn. These characteristics make the Scamp the ultimate grom board and provides a starting platform for the young riders.',
+        category: 'skimboard',
+        price: 325,
+    },
+    {4
+        id: 5,
+        name: 'Shrimp',
+        image: 'Shrimp.PNG',
+        description: 'The Shrimp evolved from the growth of Wakesurfing. Now, kids are getting into the sport at a much younger age than before. We found a need for a smaller surfer than the Scamp and the Shrimp is the answer. The Design of the Shrimp is a traditional skim style board to keep the board very maneuverable and easy to control for the kids just beginning their quest to drop the rope. It’s skim style core makes it easy for kids to sink the board under their feet at start up and will allow them to get up with no problem. We equipped the Shrimp with a single 2” fin that provides plenty of traction to keep the board locked into the wave.',
+        category: 'skimboard',
+        price: 299,
+    },
+];
