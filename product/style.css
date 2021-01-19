@@ -1,4 +1,3 @@
-
 body {
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
     /* --color1: hsla(349, 69%, 76%, 1);
@@ -122,26 +121,24 @@ footer {
     align-items: center;
   }
 
-  
 ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
 }
+
 .board-item {
-    padding: 0;
-    border: groove 3px black;
-    text-align: center;
-    margin-bottom: 10px;
+  border: solid 1px black;
+  text-align: center;
 }
-.board-name {
-    background-color: turquoise;
-}
-.board-category {
-    font-family: cursive;
-}
+
 .board-price {
     font-weight: 900;
 }
+
+.board-descript {
+    text-overflow: clip;
+    
+}
+
