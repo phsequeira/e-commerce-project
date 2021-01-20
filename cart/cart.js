@@ -19,6 +19,7 @@ for (let item of cart) {
     const totalForThisBoard = calcLineItem(item, board);
 
     total = total + totalForThisBoard;
+    total = Math.round(total * 100) / 100;
     const tableRowDOM = renderTableRow(item, board);
 
     table.append(tableRowDOM);

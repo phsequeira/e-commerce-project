@@ -3,6 +3,7 @@ import { renderBoards } from '../product/render-boards.js';
 import { findById, calcLineItem } from '../utils.js';
 import { boards } from '../board-data.js';
 import { cart } from '../cart/cart-data.js';
+import { renderTableRow } from '../cart/render-table.js';
 
 
 const test = QUnit.test;
@@ -58,9 +59,25 @@ test('compare cost of itmes to function calcLineItem', (expect) => {
     const expected = 1679.98;
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = calcLineItem(cart, boards);
+    const actual = calcLineItem(cart[2], boards[2]);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('makes row for table from elements given', (expect) => {
+    //Arrangeconst 
+    
+    // Set up your arguments and expectations
+    const expected = `<tr><td>Twinzer</td><td>1</td><td>$899.99</td></tr>`;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = renderTableRow(cart[0], boards[0]);
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
+    
 });

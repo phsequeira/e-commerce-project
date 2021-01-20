@@ -7,5 +7,7 @@ export function findById(id, array) {
 }
 
 export function calcLineItem(cartitem, boards){
-    return cartitem.quantity * boards.price;
+    let amount = cartitem.quantity * boards.price;
+    amount = Math.round(amount * 100) / 100;
+    return amount;
 }
