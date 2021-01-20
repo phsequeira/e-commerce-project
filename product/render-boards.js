@@ -28,5 +28,9 @@ export function renderBoards(board) {
     pPrice.textContent = `$${board.price}`;
     li.append(pPrice);
 
+    const button = document.createElement('button');
+    button.textContent = 'add to cart';
+    li.append(button);
+
     return li;
 }

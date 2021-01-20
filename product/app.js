@@ -1,4 +1,4 @@
-import { boards } from './data.js';
+import { boards } from '../board-data.js';
 import { renderBoards } from './render-boards.js';
 
 const list = document.getElementById('list');
