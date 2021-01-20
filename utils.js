@@ -5,3 +5,7 @@ export function findById(id, array) {
         }
     }
 }
+
+export function calcLineItem(cartitem, boards){
+    return cartitem.quantity * boards.price;
+}

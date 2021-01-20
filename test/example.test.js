@@ -1,7 +1,9 @@
 // IMPORT MODULES under test here:
 import { renderBoards } from '../product/render-boards.js';
-import { findById } from '../utils.js';
+import { findById, calcLineItem } from '../utils.js';
 import { boards } from '../board-data.js';
+import { cart } from '../cart/cart-data.js';
+
 
 const test = QUnit.test;
 
@@ -47,4 +49,18 @@ test('findById should take 1 and the board array and return twinzer', (expect) =
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
+});
+
+test('compare cost of itmes to function calcLineItem', (expect) => {
+    //Arrange
+    
+    // Set up your arguments and expectations
+    const expected = 1679.98;
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = calcLineItem(cart, boards);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
 });
