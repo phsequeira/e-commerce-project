@@ -130,6 +130,9 @@ ul {
     justify-content: space-between;
     
 }
+li {
+    width: 205px;
+}
 .board-item {
     padding: 0;
     border: groove 3px black;
@@ -147,4 +150,7 @@ ul {
 }
 table {
     width: 100%;
+}
+div {
+    text-align: center;
 }
