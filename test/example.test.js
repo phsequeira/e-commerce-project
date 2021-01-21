@@ -4,6 +4,7 @@ import { findById, calcLineItem } from '../utils.js';
 import { boards } from '../board-data.js';
 import { cart } from '../cart/cart-data.js';
 import { renderTableRow } from '../cart/render-table.js';
+import { getCart } from '../cart-utils.js';
 
 
 const test = QUnit.test;
@@ -80,4 +81,21 @@ test('makes row for table from elements given', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
     
+});
+
+test('should return the current state of the cart', assert => {
+    const myFakeCart = [
+        { id: 'apple', quantity: 4 },
+        { id: 'banana', quantity: 2 },
+    ];
+
+    const myStringyFakeCart = JSON.stringify(myFakeCart);
+    localStorage.setItem('CART', myStringyFakeCart);
+
+    // arrange
+    const cart = getCart();
+    const expected = myFakeCart;
+    
+    // assert
+    assert.deepEqual(cart, expected);
 });

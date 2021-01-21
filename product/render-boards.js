@@ -1,4 +1,4 @@
-//import { findById } from '../utils';
+import { addToCart } from '../cart-utils.js';
 
 export function renderBoards(board) {
 
@@ -30,31 +30,19 @@ export function renderBoards(board) {
     pPrice.textContent = `$${board.price}`;
     li.append(pPrice);
 
-    const quantity = document.createElement('input');
-    quantity.type = 'number';
-    quantity.min = 0;
-    let howMany = quantity.value;
-    li.append(quantity);
+    //const quantity = document.createElement('input');
+    //quantity.type = 'number';
+    //quantity.min = 0;
+    //let howMany = quantity.value;
+    //li.append(quantity);
 
 
     const button = document.createElement('button');
     button.textContent = 'add to cart';
     button.value = board.id;
     button.addEventListener('click', () => {
+        addToCart(board.id);
 
-        console.log(howMany);
-
-        //const cart = getCart();
-//
-        //let itemInCart = findById(cart, board.id);
-//
-//
-        //if (!itemInCart) {
-        //    itemInCart = {
-        //        id: board.id,
-        //        quantity: howMany
-        //    };
-        //}
     });
     
     li.append(button);

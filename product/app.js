@@ -8,15 +8,3 @@ for (let board of boards) {
 
     list.append(boardEl);
 }
-
-const quantity = document.getElementById('quantity');
-const orderButton = document.getElementById('button');
-
-
-console.log(quantity);
-orderButton.addEventListener('click', () => {
-
-    const quantityValue = quantity.nodeValue;
-
-    console.log(quantityValue);
-});
