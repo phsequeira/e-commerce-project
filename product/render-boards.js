@@ -42,7 +42,7 @@ export function renderBoards(board) {
     button.value = board.id;
     button.addEventListener('click', () => {
         addToCart(board.id);
-
+        alert('item was added to cart!');
     });
     
     li.append(button);

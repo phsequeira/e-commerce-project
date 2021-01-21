@@ -1,17 +1,21 @@
 import { boards } from '../board-data.js';
 import { findById, calcLineItem } from '../utils.js';
 import { renderTableRow } from './render-table.js';
-import { cart } from './cart-data.js';
+import { clearCart, getCart } from '../cart-utils.js';
 
 const table = document.querySelector('table');
 const orderButton = document.getElementById('place-order');
 
 
 orderButton.addEventListener('click', () => {
-    alert('Your order has been placed');
+    const cart = getCart();
+    alert(JSON.stringify(cart));
+    clearCart();
+    window.location.reload();
 });
 
 let total = 0;
+const cart = getCart();
 
 for (let item of cart) {
     const board = findById(item.id, boards);

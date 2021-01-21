@@ -20,7 +20,8 @@ test('time to test a function', (expect) => {
         price: 899.99,
     };
     // Set up your arguments and expectations
-    const expected = `<li class="board-item"><h3 class="board-name">Twinzer</h3><img class="board-img" src="../assets/Twinzer.PNG"><p class="board-descript">Beginner-Intermediate, Intermediate-Advanced, Advanced-Expert</p><p class="board-category">wakesurf</p><p class="board-price">$899.99</p><button>add to cart</button></li>`;
+    // eslint-disable-next-line no-useless-escape
+    const expected = `<li class="board-item"><h3 class="board-name">Twinzer</h3><img class="board-img" src="../assets/Twinzer.PNG"><p class="board-descript">Beginner-Intermediate, Intermediate-Advanced, Advanced-Expert</p><p class="board-category">wakesurf</p><p class="board-price">$899.99</p><button value=\"1\">add to cart</button></li>`;
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -85,8 +86,8 @@ test('makes row for table from elements given', (expect) => {
 
 test('should return the current state of the cart', assert => {
     const myFakeCart = [
-        { id: 'apple', quantity: 4 },
-        { id: 'banana', quantity: 2 },
+        { id: 'twinzer', quantity: 4 },
+        { id: 'shrimp', quantity: 2 },
     ];
 
     const myStringyFakeCart = JSON.stringify(myFakeCart);
@@ -95,6 +96,16 @@ test('should return the current state of the cart', assert => {
     // arrange
     const cart = getCart();
     const expected = myFakeCart;
+    
+    // assert
+    assert.deepEqual(cart, expected);
+});
+test('should return an empty array if the cart is null in local storage', assert => {
+    localStorage.removeItem('CART');
+    // arrange
+
+    const cart = getCart();
+    const expected = [];
     
     // assert
     assert.deepEqual(cart, expected);
